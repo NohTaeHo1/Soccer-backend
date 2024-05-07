@@ -12,13 +12,5 @@ public class SoccerApplication {
 
     public static void main(String... args) {
         SpringApplication.run(SoccerApplication.class, args);
-
-
     }
-
-//    @Bean
-//    JPAQueryFactory jpaQueryFactory(EntityManager manager) {
-//        return new JPAQueryFactory(manager);
-//    }
-
 }

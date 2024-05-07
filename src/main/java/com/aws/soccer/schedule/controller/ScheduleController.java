@@ -19,7 +19,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 @RequiredArgsConstructor
-@RequestMapping(path = "/api/schedule")
+@RequestMapping(path = "/api/schedules")
 @RestController
 public class ScheduleController {
 

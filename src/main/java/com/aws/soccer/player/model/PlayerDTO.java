@@ -1,17 +1,13 @@
 package com.aws.soccer.player.model;
 
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import com.querydsl.core.annotations.QueryProjection;
+import lombok.*;
 import org.springframework.stereotype.Component;
 
-@AllArgsConstructor
 @NoArgsConstructor
 @Builder
 @Data
-
 @Component
 public class PlayerDTO {
 
@@ -30,4 +26,21 @@ public class PlayerDTO {
     private String height;
     private String weight;
 
+    @QueryProjection
+    public PlayerDTO(Long id, String playerId, String playerName, String teamId, String ePlayerName, String nickname, String joinYyyy, String POSITION, String backNo, String nation, String birthDate, String solar, String height, String weight) {
+        this.id = id;
+        this.playerId = playerId;
+        this.playerName = playerName;
+        this.teamId = teamId;
+        this.ePlayerName = ePlayerName;
+        this.nickname = nickname;
+        this.joinYyyy = joinYyyy;
+        this.POSITION = POSITION;
+        this.backNo = backNo;
+        this.nation = nation;
+        this.birthDate = birthDate;
+        this.solar = solar;
+        this.height = height;
+        this.weight = weight;
+    }
 }

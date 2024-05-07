@@ -7,5 +7,6 @@ import java.util.List;
 
 public interface TeamDAO {
 
-    public List<TeamDTO> getAllPlayer();
+    List<TeamDTO> gainAllTeam();
+    List<TeamDTO> gainAllTeamASC();
 }

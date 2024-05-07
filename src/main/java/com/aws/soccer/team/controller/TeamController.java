@@ -14,7 +14,7 @@ import java.util.Map;
 @Slf4j
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 @RequiredArgsConstructor
-@RequestMapping(path = "/api/team")
+@RequestMapping(path = "/api/teams")
 @RestController
 public class TeamController {
     private final TeamServiceImpl service;

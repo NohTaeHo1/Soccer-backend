@@ -28,12 +28,18 @@ public class PlayerRouter {
             case "1" -> repository.getDistinctPosition();
             case "2" -> repository.getPlayerNameFromSuwon();
             case "3" -> repository.getPlayersByNameAndHeight();
-            case "4" -> repository.getplayersByCondition();
+            case "Q5" -> repository.getplayersByCondition();
             case "5" -> repository.getSuwonGK();
             case "6" -> repository.getPlayersLimit(PageRequest.of(0, 3));
-            case "01" -> service.getAllPlayer();
-            case "02" -> service.getAllPlayerProjections();
-            case "03" -> service.getAllPlayerSelectFrom();
+            case "01" -> service.getAllPlayer(); // 13,152,084
+            case "02" -> service.getAllPlayerProjections(); // 10,554,113
+            case "03" -> service.getAllPlayerSelectFrom(); // 95,588,011 ns
+            case "04" -> service.getAllPlayerNoProjections(); // 158,781,846 ns
+            case "15" -> service.gainSuwonGK();
+            case "Q2" -> service.gainPositionTypeEmpty();
+            case "Q3" -> service.gainPositionTypeNew();
+            case "Q4" -> service.gainGoalkeeperSuwon();
+
             default -> null;
         };
     }

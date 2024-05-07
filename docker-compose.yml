@@ -16,24 +16,24 @@ services:
     restart: always
     ports:
       - "3321:3306"
-    networks:
-      - test_env
-  application:
-    container_name: soccer-application-container
-    build: .
-    environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://soccer-container:3306/soccerdb
-      SPRING_DATASOURCE_USERNAME: root
-      SPRING_DATASOURCE_PASSWORD: root
-    ports:
-      - "8081:8080"
-    depends_on:
-      - database
-    networks:
-      - test_env
-
-  
-
-networks:
-  test_env:
-    driver: bridge
+#    networks:
+#      - test_env
+#  application:
+#    container_name: soccer-application-container
+#    build: .
+#    environment:
+#      SPRING_DATASOURCE_URL: jdbc:mysql://soccer-container:3306/soccerdb
+#      SPRING_DATASOURCE_USERNAME: root
+#      SPRING_DATASOURCE_PASSWORD: root
+#    ports:
+#      - "8081:8080"
+#    depends_on:
+#      - database
+#    networks:
+#      - test_env
+#
+#
+#
+#networks:
+#  test_env:
+#    driver: bridge

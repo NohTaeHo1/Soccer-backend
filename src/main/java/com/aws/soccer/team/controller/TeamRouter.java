@@ -15,7 +15,7 @@ import java.util.List;
 public class TeamRouter {
 
     private final TeamRepository repository;
-    private final TeamDAOImpl dao;
+    private final TeamDAOImpl service;
 
     public List<?> execute(String type) {
 
@@ -26,7 +26,8 @@ public class TeamRouter {
             case "4" -> repository.getTeamByNoPosition();
             case "5" -> repository.getTeamByDate();
             case "6" -> repository.getTeamByHeight();
-            case "0" -> dao.getAllPlayer();
+            case "0" -> service.gainAllTeam();
+            case "Q1" -> service.gainAllTeamASC();
             default -> null;
         };
     }

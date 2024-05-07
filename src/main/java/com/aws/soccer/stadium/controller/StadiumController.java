@@ -12,7 +12,7 @@ import java.util.Map;
 
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 @RequiredArgsConstructor
-@RequestMapping(path = "/api/stadium")
+@RequestMapping(path = "/api/stadiums")
 @RestController
 public class StadiumController {
 
