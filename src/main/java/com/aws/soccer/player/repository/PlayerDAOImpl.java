@@ -83,13 +83,14 @@ public class PlayerDAOImpl implements PlayerDAO {
                         player.birthDate,
                         player.solar,
                         player.height,
-                        player.weight))
+                        player.weight
+                        ))
                 .from(player)
                 .fetch();
     }
 
     @Override
-    public List<PlayerDTO> getAllPlayerSelectFrom() { // 90,682,459 ns
+    public List<PlayerDTO> getAllPlayerStream() { // 90,682,459 ns
         return factory.selectFrom(player)
                 .fetch()
                 .stream()
@@ -98,7 +99,7 @@ public class PlayerDAOImpl implements PlayerDAO {
     }
 
     @Override
-    public List<PlayerDTO> getAllPlayerNoProjections() {
+    public List<PlayerDTO> getAllPlayerQPl() {
         return factory.select(
                         new QPlayerDTO(
                                 player.id,
@@ -139,6 +140,13 @@ public class PlayerDAOImpl implements PlayerDAO {
                 .from(player)
                 .where(player.POSITION.eq("GK").and(player.teamId.eq("K02")))
                 .fetch();
+    }
+
+    @Override
+    public Long countAllPlayer() {
+        return factory.select(player.count())
+                .from(player)
+                .stream().count();
     }
 
 

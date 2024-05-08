@@ -13,9 +13,9 @@ public interface PlayerDAO {
 
     List<PlayerDTO> getAllPlayerProjections();
 
-    List<PlayerDTO> getAllPlayerSelectFrom();
+    List<PlayerDTO> getAllPlayerStream();
 
-    List<PlayerDTO> getAllPlayerNoProjections();
+    List<PlayerDTO> getAllPlayerQPl();
 
     List<PlayerDTO> gainPositionEmpty();
 
@@ -28,4 +28,6 @@ public interface PlayerDAO {
 
     //004
     List<PlayerDTO> gainGoalkeeperSuwon();
+
+    Long countAllPlayer();
 }

@@ -1,4 +1,3 @@
--- select * from stadium;
 
 INSERT INTO stadium (stadium_id, stadium_name, hometeam_id, seat_count, address, ddd, tel) VALUES  ('D03','전주월드컵경기장','K05',28000,'전북 전주시 덕진구 반월동  763-1','063','273-1763');
 INSERT INTO stadium (stadium_id, stadium_name, hometeam_id, seat_count, address, ddd, tel) VALUES  ('B02','성남종합운동장','K08',27000,'경기도 성남시 분당구 야탑동  486','031','753-3956');

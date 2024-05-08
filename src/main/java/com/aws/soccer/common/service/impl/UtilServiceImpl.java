@@ -1,4 +1,6 @@
-package com.aws.soccer.common.service;
+package com.aws.soccer.common.service.impl;
+
+import com.aws.soccer.common.service.UtilService;
 
 public class UtilServiceImpl implements UtilService {
 

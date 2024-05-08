@@ -20,9 +20,9 @@ import java.util.stream.Stream;
 public class PlayerRouter {
 
     private final PlayerRepository repository;
-    private final PlayerDAOImpl service;
+    private final PlayerDAOImpl DAOservice;
 
-    public List<?> execute(String type) {
+    public List<?> execute(String type, int pageNumber, int pageSize) {
 
         return switch (type){
             case "1" -> repository.getDistinctPosition();
@@ -31,14 +31,14 @@ public class PlayerRouter {
             case "Q5" -> repository.getplayersByCondition();
             case "5" -> repository.getSuwonGK();
             case "6" -> repository.getPlayersLimit(PageRequest.of(0, 3));
-            case "01" -> service.getAllPlayer(); // 13,152,084
-            case "02" -> service.getAllPlayerProjections(); // 10,554,113
-            case "03" -> service.getAllPlayerSelectFrom(); // 95,588,011 ns
-            case "04" -> service.getAllPlayerNoProjections(); // 158,781,846 ns
-            case "15" -> service.gainSuwonGK();
-            case "Q2" -> service.gainPositionTypeEmpty();
-            case "Q3" -> service.gainPositionTypeNew();
-            case "Q4" -> service.gainGoalkeeperSuwon();
+            case "01" -> DAOservice.getAllPlayer(); // 13,152,084
+            case "02" -> DAOservice.getAllPlayerProjections(); // 10,554,113
+            case "03" -> DAOservice.getAllPlayerStream(); // 95,588,011 ns
+            case "04" -> DAOservice.getAllPlayerQPl(); // 158,781,846 ns
+            case "15" -> DAOservice.gainSuwonGK();
+            case "Q2" -> DAOservice.gainPositionTypeEmpty();
+            case "Q3" -> DAOservice.gainPositionTypeNew();
+            case "Q4" -> DAOservice.gainGoalkeeperSuwon();
 
             default -> null;
         };

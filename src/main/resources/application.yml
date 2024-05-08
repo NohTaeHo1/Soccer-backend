@@ -2,7 +2,7 @@ spring:
   application:
     name: soccer
   datasource:
-    url: jdbc:mysql://15.164.24.89:3306/soccerdb
+    url: jdbc:mysql://localhost:3306/soccerdb
     username: root
     password: 1234
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -13,7 +13,7 @@ spring:
    
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: create-drop
     
     properties:
       hibernate:
